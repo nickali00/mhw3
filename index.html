@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Nba test</title>
+      <link rel="stylesheet" href="provided-style.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <meta name="viewport"content="width=device-width, initial-scale=1">
+    <script src="constants.js" defer="true"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="script.js" defer="true"></script>
+  </head>
+
+  <body>
+    <article>
+      <header>
+          <h1>Web Programming</h1>
+          <div>
+            <span>M</span>
+            <span>H</span>
+            <span>W</span>
+            <span>2</span>
+          </div>
+
+      </header>
+      <h1>scegli un giocatore per ruolo e vi dirò chi siete</h1>
+      <button onclick="authenticate().then(loadClient)">authorize and load</button>
+		<button onclick="getvideo()">execute</button>
+      <section class="question-name">
+        <h1>Domanda 1: centro</h1>
+      </section>
+
+      <section class="choice-grid">
+        <div class="cont" data-choice-id="blep" data-question-id="one">
+
+        </div>
+
+        <div class="cont" data-choice-id="happy" data-question-id="one">
+
+        </div>
+
+        <div class="cont" data-choice-id="sleeping" data-question-id="one">
+
+        </div>
+
+        <div class="cont" data-choice-id="dopey" data-question-id="one">
+
+        </div>
+
+        <div class="cont" data-choice-id="burger" data-question-id="one">
+
+        </div>
+
+        <div class="cont" data-choice-id="cart" data-question-id="one">
+
+        </div>
+
+        <div class="cont" data-choice-id="nerd" data-question-id="one">
+
+        </div>
+
+        <div class="cont" data-choice-id="shy" data-question-id="one">
+
+        </div>
+
+        <div class="cont" data-choice-id="sleepy" data-question-id="one">
+
+        </div>
+      </section>
+
+      <section class="question-name">
+        <h1>Domanda 2: Ala Piccola</h1>
+      </section>
+
+      <section class="choice-grid">
+        <div class="cont" data-choice-id="blep" data-question-id="two">
+
+        </div>
+
+        <div class="cont" data-choice-id="happy" data-question-id="two">
+
+        </div>
+
+        <div class="cont" data-choice-id="sleeping" data-question-id="two">
+
+        </div>
+
+        <div class="cont" data-choice-id="dopey" data-question-id="two">
+
+        </div>
+
+        <div class="cont" data-choice-id="burger" data-question-id="two">
+
+        </div>
+
+        <div class="cont" data-choice-id="cart" data-question-id="two">
+
+        </div>
+
+        <div class="cont" data-choice-id="nerd" data-question-id="two">
+
+        </div>
+
+        <div class="cont" data-choice-id="shy" data-question-id="two">
+
+        </div>
+
+        <div class="cont" data-choice-id="sleepy" data-question-id="two">
+
+        </div>
+      </section>
+
+      <section class="question-name">
+        <h1>Domanda 3: Playmaker</h1>
+      </section>
+
+      <section class="choice-grid">
+        <div class="cont" data-choice-id="blep" data-question-id="three">
+
+        </div>
+
+        <div class="cont" data-choice-id="happy" data-question-id="three">
+
+        </div>
+
+        <div class="cont" data-choice-id="sleeping" data-question-id="three">
+
+        </div>
+
+        <div class="cont" data-choice-id="dopey" data-question-id="three">
+
+        </div>
+
+        <div class="cont" data-choice-id="burger" data-question-id="three">
+
+        </div>
+
+        <div class="cont" data-choice-id="cart" data-question-id="three">
+
+        </div>
+
+        <div class="cont" data-choice-id="nerd" data-question-id="three">
+
+        </div>
+
+        <div class="cont" data-choice-id="shy" data-question-id="three">
+
+        </div>
+
+        <div class="cont" data-choice-id="sleepy" data-question-id="three">
+
+        </div>
+      </section>
+      <button id="bt">verifica</button>
+      <button id="reset">ripeti test</button>
+          <div class="conten"></div>
+ 		<div class="video"></div>
+    </article>
+
+
+  </body>
+</html>
