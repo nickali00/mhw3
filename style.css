@@ -1,0 +1,123 @@
+/* TODO: inserite il CSS necessario per completare il MHW! */
+
+
+img{
+  padding: 10px 10px 0px 10px;
+  width: 90%;
+  height: 80%;
+}
+
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button:disabled{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+button:hover {background-color: #e0e0e0}
+
+.choice-grid {
+  align-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.cont {
+  width: 32.5%;
+  background-color: rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+.choice-grid img.checkbox{
+  text-align: left;
+  padding-top: 5px;
+  margin-top: 0px
+}
+
+.question-name , #bt{
+  margin-top: 120px;
+  margin-bottom: 20px;
+}
+
+.results{
+  margin-bottom: 120px;
+}
+.selcol{
+  background-color: #cfe3ff;
+  width: 32.5%;
+    margin-bottom: 20px;
+}
+
+.sel{
+  background-color: rgba(0,0,0,0.6);
+  width: 32.5%;
+  margin-bottom: 20px;
+}
+
+
+@media (max-width: 700px)
+{
+  article {
+   margin: auto;
+   width: 95%;
+ }
+ .cont{
+
+   width: 45%;
+   background-color: rgba(0,0,0,0.1);
+   margin-bottom: 20px;
+ }
+ .selcol{
+   background-color: #cfe3ff;
+   width: 45%;
+   margin-bottom: 20px;
+ }
+ .sel{
+   background-color: rgba(0,0,0,0.6);
+   width: 45%;
+   margin-bottom: 20px;
+ }
+ :root {
+   --grid-size: 100%;
+   --margin-size: auto;
+   --square-size: calc((var(--grid-size) / 3) - var(--margin-size));
+ }
+ .question-name h1 {
+   font-size: 40px;
+ }
+ header div{
+   display: none;
+ }
+}
+.question-name {
+  background-image: url('https://nicolaaliuni.altervista.org/mhw2/background.png');
+ }
+@media (max-width: 500px)
+{
+ .cont{
+
+   width: 32%;
+   background-color: rgba(0,0,0,0.1);
+   margin-bottom: 20px;
+ }
+ .selcol{
+   background-color: #cfe3ff;
+   width: 32%;
+   margin-bottom: 20px;
+ }
+ .sel{
+   background-color: rgba(0,0,0,0.6);
+   width: 32%;
+   margin-bottom: 20px;
+ }
+}

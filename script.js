@@ -16,7 +16,7 @@ function assignSpace()
   }
   const new_img = document.createElement('img');
   new_img.className = "checkbox";
-  new_img.src = 'http://nicolaaliuni.altervista.org/nceck.png';
+  new_img.src = 'https://nicolaaliuni.altervista.org/nceck.png';
   event.currentTarget.classList.remove('sel');
   event.currentTarget.classList.add('selcol');
   event.currentTarget.children[1].remove();
@@ -64,7 +64,7 @@ function pulisci(i){
   for (const box of boxes)
   {
     const new_img = document.createElement('img');
-     new_img.src = 'http://nicolaaliuni.altervista.org/cech.png';
+     new_img.src = 'https://nicolaaliuni.altervista.org/cech.png';
       new_img.className = "checkbox";
     if(box.attributes[2].nodeValue==i)
     {
@@ -148,24 +148,6 @@ let sem;
 
    window.scrollTo(0, 0);
  }
-function onText(text) {
-  let boxes = document.querySelectorAll('.choice-grid .cont');
- let i=0;
-  for (const box of boxes)
-  {
-  	 const j=imgcasuale(text.mhw3[i].ruolo);
-    // console.log(j);
-     const header = document.createElement('img');
-     header.src=text.mhw3[j].img;
-     box.appendChild(header);
-
-     const header2 = document.createElement('img');
-     header2.src='http://nicolaaliuni.altervista.org/cech.png';
-     header2.classList.add('checkbox');
-     box.appendChild(header2);
-     i++;
-  }
-}
 
 
 const freeBoxes = [];
@@ -184,13 +166,35 @@ attivoev();
 
 /*##################  codice nuovo  ########################à*/
 
+function onText(text) {
+  let boxes = document.querySelectorAll('.choice-grid .cont');
+ let i=0;
+  for (const box of boxes)
+  {
+  	 const j=imgcasuale(text.mhw3[i].ruolo);
+    // console.log(j);
+     const header = document.createElement('img');
+     let str=text.mhw3[j].img;
+     str=str.split('://');
+     header.src='https://'+str[1];
+     box.appendChild(header);
+
+     const header2 = document.createElement('img');
+     header2.src='https://nicolaaliuni.altervista.org/cech.png';
+     header2.classList.add('checkbox');
+     box.appendChild(header2);
+     i++;
+  }
+}
+
+
 function onResponse(response) {
   return response.json();
 }
 
 function prendoapi()
 {
- fetch('http://nicolaaliuni.altervista.org/mhw2/api.php').then(onResponse).then(onText);
+ fetch('https://nicolaaliuni.altervista.org/mhw2/api.php').then(onResponse).then(onText);
 }
 
 function imgcasuale(r)
@@ -240,13 +244,13 @@ function authenticate() {
               function(err) { console.error("Error signing in", err); });
   }
   function loadClient() {
-    gapi.client.setApiKey("AIzaSyCBUgTTXlq73TIV_0LIwJNCUjCE5QodoSA");
+    gapi.client.setApiKey("AIzaSyCCCWwrPCDuYmuPLu1zae9jDF4Hy7EhjUk");
     return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
         .then(function() { console.log("GAPI client loaded for API"); },
               function(err) { console.error("Error loading GAPI client for API", err); });
   }
   gapi.load("client:auth2", function() {
-    gapi.auth2.init({client_id: "912032878615-jn9nujkuenmen9ojgkuv65lf1fipb1tn.apps.googleusercontent.com"});
+    gapi.auth2.init({client_id: "866753232000-g6ucm0164rrn5572eak8aidqpmqfu5la.apps.googleusercontent.com"});
   });
 
 
